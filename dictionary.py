@@ -9,6 +9,9 @@ my_dict1={
     "city":"Copenhagen"
 }
 print(my_dict1)
+#get the keys only
+for key in my_dict1.keys():#or values() to get only values of the dictionaries
+    print("key:",key)
 #accessing value using key
 print(my_dict1["name"])
 #adding new key value pair
