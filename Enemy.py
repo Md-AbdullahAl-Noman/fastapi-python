@@ -16,19 +16,23 @@ class Enemy:
     # parameterized constructor:instead of setting the attributes 
     # after creating the object we want to set it automatically when the object is instantiated
     def __init__(self,type_of_enemy,health_points=500,attack_damage=50):
-        self.type_of_enemy=type_of_enemy
+        self.__type_of_enemy=type_of_enemy
         self.health_points=health_points
         self.attack_damage=attack_damage
 
     def talk(self):
-        print(f"I am a {self.type_of_enemy}.Be prepared to fight!")
+        print(f"I am a {self.__type_of_enemy}.Be prepared to fight!")
 
     def walk_forward(self):
-        print(f"{self.type_of_enemy} moves closer to you")
+        print(f"{self.__type_of_enemy} moves closer to you")
     def attack(self):
-        print(f"{self.type_of_enemy} attacks you for {self.attack_damage} damage!")
+        print(f"{self.__type_of_enemy} attacks you for {self.attack_damage} damage!")
 
     def all_info(self):
-        print(f"Type of enemy:{self.type_of_enemy}")
+        print(f"Type of enemy:{self.__type_of_enemy}")
         print(f"Health points:{self.health_points}")
         print(f"Attack damage:{self.attack_damage}")
+
+    #getter method used to access private attribute
+    def get_type_of_enemy(self):
+        return self.__type_of_enemy
