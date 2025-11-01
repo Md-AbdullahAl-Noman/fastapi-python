@@ -15,7 +15,7 @@ class Enemy:
 
     # parameterized constructor:instead of setting the attributes 
     # after creating the object we want to set it automatically when the object is instantiated
-    def __init__(self,type_of_enemy,health_points=500,attack_damage=50):
+    def __init__(self,type_of_enemy,health_points,attack_damage):
         self.__type_of_enemy=type_of_enemy
         self.health_points=health_points
         self.attack_damage=attack_damage
